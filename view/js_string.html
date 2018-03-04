@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js字符串对象</title>
+    <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+    <style>
+        div{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+<a href="javascript:show()">点我调用一个函数</a>
+<div>
+    <p>大家好啊</p>
+</div>
+</body>
+<script type="text/javascript">
+    let num = 13.1415;
+    // 按给定的位数转换数字(以下输出为13.1)
+    console.log(num.toPrecision(3));
+
+    // 查找字符串,返回出现的位置,无则返回-1
+    let str = 'hello world!';
+    console.log(str.indexOf("llo"));
+
+    //剪取字符串
+    console.log(str.slice(1, 3));
+
+    //类似于PHP的explode
+    console.log(str.split(' '));
+
+    //利用Javascript:functionName的形式调用方法
+    function show() {
+        alert('hahaha');
+
+    }
+
+    // js合并数组
+    let first = ["Cecilie", "Lone"];
+    let stale = ["Emil", "Tobias", "Linus"];
+
+    let son = first.concat(stale);
+
+    console.log(son);
+    // 数组转字符串,类似implode
+    console.log(son.join());
+    // 了两者貌似相同
+    console.log(son.toString());
+
+    // 去除包裹和包裹
+    $('p').click(function () {
+        $('p').unwrap();
+    });
+    $('p').dblclick(function () {
+        $('p').wrap("<div></div>")
+    })
+
+
+
+
+
+
+
+
+</script>
+</html>
