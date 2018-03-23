@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="26f50aad-e443-46b0-944f-143f3106374e" name="本地mosquitto服务器测试" url="http://192.168.1.115">
-        <fileTransfer host="192.168.1.115" port="21">
+      <webServer id="f19285f4-94f7-4daf-b4e0-98ffb4905197" name="阿里巴巴" url="http://120.78.78.42/mqtt/">
+        <fileTransfer host="120.78.78.42" port="21" rootFolder="/public/mqtt">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
