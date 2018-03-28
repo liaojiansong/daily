@@ -1,14 +1,17 @@
 <?php
 
 class MyClient extends Mosquitto\Client {
-
+    // 等待订阅
 	protected $pendingSubs = [];
+	// 授予,已经订阅
 	protected $grantedSubs = [];
-
+	// 订阅回调
 	protected $subscribeCallback = null;
 
 	public function __construct($id = null, $cleanSession = false) {
+	    // 调用父类构造函数
 		parent::__construct($id, $cleanSession);
+		// 被订阅时触发的函数
 		parent::onSubscribe(array($this, 'subscribeHandler'));
 	}
 
